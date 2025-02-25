@@ -10,6 +10,7 @@
 body{
     font-family: Open Sans;
     font-size: 16px;
+    // font-weight: 700;
 }
 
 %flex-center{
@@ -138,6 +139,7 @@ body{
   }
   &__sub-text{
     font-size: 18px;
+    font-weight:900;
     line-height: 25px;
     letter-spacing: 0%;
     color: #FFFFFF;
@@ -174,7 +176,7 @@ body{
 
 .main-event {
   @extend %flex-center; 
-
+  margin-bottom: 50px;
   &__image {
     width: 380px;
     height: 318px;
@@ -253,12 +255,50 @@ body{
       letter-spacing: 0%;
 
     }
-
-
     }
   }
 
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px; /* Adjust spacing between grid items */
+  width: 80%;
+  align-items: center;
+  // margin-left: 20px;
+  &__item{
+    max-width: 353px;
+    max-height: 536px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    &__img__circle {
+      @extend %upload-circle;
+      margin-top: -40px; /* Moves it up closer to the top */
+      margin-left: auto; /* Pushes it to the right */
+      margin-right: 10px; 
+    }
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__date{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    font-weight: 700;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  &__loc{
+    font-size: 18px;
+    font-weight: 700;
+    // margin-bottom: 20px;
+  }
 
+}
 // .countdown-timer {
 //   display: flex;
 //   align-items: center;
