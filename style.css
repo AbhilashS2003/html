@@ -13,13 +13,12 @@ body {
   font-size: 16px;
 }
 
-.main-event, .banner {
+.end__yellow, .load-more, .main-event, .banner {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Ensure your container spans the full width */
 .container {
   max-width: 1296px;
   margin: 0 auto;
@@ -29,6 +28,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   margin: 40px 60px;
+  margin-right: 0;
   /* Common style for login and donate buttons */
 }
 .nav-bar__links {
@@ -115,7 +115,7 @@ body {
 .grid__item__img__circle img, .main-event__img__circle img {
   display: block;
   width: 60%;
-  margin: 7px 8px;
+  margin: 7px 9px;
 }
 
 .main-event {
@@ -198,18 +198,25 @@ body {
   gap: 10px; /* Adjust spacing between grid items */
   width: 80%;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 .grid__item {
   max-width: 353px;
   max-height: 536px;
   margin-bottom: 50px;
-  align-items: center;
-  justify-content: center;
+  margin-left: 50px;
+}
+.grid__item__img {
+  width: 380px;
+  height: 318px;
+  border-radius: 5px;
+  margin-top: 50px;
+  display: inline-block;
 }
 .grid__item__img__circle {
-  margin-top: -40px; /* Moves it up closer to the top */
-  margin-left: auto; /* Pushes it to the right */
-  margin-right: 10px;
+  margin-top: -350px;
+  margin-left: 290px;
 }
 .grid__title {
   font-size: 20px;
@@ -221,12 +228,166 @@ body {
   flex-direction: row;
   font-size: 18px;
   font-weight: 700;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 20px;
+  align-items: center;
 }
 .grid__loc {
   font-size: 18px;
   font-weight: 700;
 }
+.grid__load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Rectangle 1341 *//*# sourceMappingURL=style.css.map */
+.load-more__btn {
+  color: #F13E5D;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27.24px;
+  letter-spacing: 0%;
+  width: 285px;
+  height: 70px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-bottom: 100px;
+  box-shadow: none;
+  border: 1px solid black;
+  border-bottom: 5px solid #000;
+}
+
+.end {
+  background-color: #F7DA5B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.end__swag {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 75px;
+  color: #F33C5C;
+  margin: 70px auto 20px auto;
+}
+.end__raffle-img {
+  position: relative; /* Establish a positioning context for the text overlay */
+  display: inline-block;
+}
+.end__raffle-img__bck {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.end__raffle-img__text {
+  position: absolute;
+  top: 50%; /* Adjust the vertical position */
+  left: 50%; /* Adjust the horizontal position */
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(-4deg); /* Centers the text within the container */
+  color: #000; /* White text for contrast */
+  text-align: center;
+  padding: 10px;
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 50px;
+  background-color: transparent;
+}
+.end__yellow {
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 30px;
+  margin: 20px 50px;
+}
+.end__raffle-text {
+  margin: 70px auto 20px auto;
+}
+.end__raffle-text__red {
+  color: #F43C5C;
+}
+.end__duck {
+  margin-left: 40px;
+}
+.end__community-btn {
+  background-color: #F13E5D;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 30px;
+  width: 585px;
+  height: 99px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  z-index: 1;
+  position: relative;
+}
+.end__green {
+  position: relative;
+  width: 100%;
+  background-color: #0B2A2B;
+  /* Slanted shape */
+  -webkit-clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
+  margin-top: -40px;
+  /* 
+    Moves this section upward to overlap the button.
+    Adjust the negative margin to control how much overlap you want.
+  */
+}
+.end__green::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  background-color: #FFF7C2;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
+  /*
+    The same shape as .end__green but expanded slightly (by 8px on each side)
+    to create a border effect.
+  */
+}
+.end__green__text {
+  /* Your existing text styling here */
+  text-align: center;
+  padding: 40px 20px;
+}
+.end__green__input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.end__green__input input {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+}
+.end__green__input button {
+  padding: 10px 20px;
+}
+.end__green__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.end__green__links a {
+  color: #fff;
+  text-decoration: none;
+}
+.end__green__img {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.end__green__img img {
+  max-width: 200px;
+}/*# sourceMappingURL=style.css.map */
