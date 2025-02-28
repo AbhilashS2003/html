@@ -440,6 +440,11 @@ body {
 .end__duck {
   margin-left: 40px;
 }
+@media screen and (max-width: 720px) {
+  .end__duck {
+    width: 80%;
+  }
+}
 .end__community-btn {
   background-color: #F13E5D;
   color: #FFFFFF;

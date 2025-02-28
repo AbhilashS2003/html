@@ -468,6 +468,10 @@ body{
   }
   &__duck{
     margin-left: 40px;
+    @media  screen and (max-width:720px) {
+      width: 80%;
+      
+    }
   }
 
   &__community-btn {
