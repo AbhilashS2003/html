@@ -22,8 +22,7 @@ body {
 .nav-bar {
   font-size: 18px;
   font-weight: 600;
-  margin: 40px 0;
-  margin-right: 0;
+  margin: 40px auto 40px auto;
   max-width: 1296px;
   /* Common style for login and donate buttons */
 }
@@ -33,14 +32,15 @@ body {
   align-items: center;
   gap: 20px;
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin-right: 40px;
   margin: auto;
 }
 @media screen and (max-width: 720px) {
   .nav-bar__links {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 }
 .nav-bar__links__elements {
@@ -88,7 +88,7 @@ body {
 }
 .banner__text {
   font-size: 64px;
-  line-height: 45px;
+  line-height: 55px;
   letter-spacing: 0%;
   color: #FFFFFF;
   margin-left: 70px;
@@ -189,26 +189,25 @@ body {
   display: flex;
 }
 .main-event__text .timer__time-box {
-  background-color: #f0f0f0;
   border-radius: 5px;
   padding: 2px 5px 2px 5px;
   text-align: center;
   width: 50px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   font-family: "Open Sans", sans-serif;
   margin-right: 20px;
+  border: 1px solid #CCCFDB;
 }
 .main-event__text .timer__time-box .time-value {
   font-size: 32px;
   font-weight: bold;
   color: #000;
-  background-color: #d3d3d3;
+  background-color: #EFF1F5;
+  margin: -2px -5px;
   border-radius: 5px;
 }
 .main-event__text .timer__time-box .time-label {
   font-size: 10px;
   color: #888;
-  margin-top: 0px;
   padding: 2px 10px 2px 10px;
 }
 .main-event__text .date {
@@ -368,9 +367,14 @@ body {
 .end__swag {
   font-family: Roboto;
   font-weight: 900;
-  font-size: 75px;
+  font-size: clamp(3rem, 8vw, 5rem);
   color: #F33C5C;
   margin: 70px auto 20px auto;
+}
+@media screen and (max-width: 720px) {
+  .end__swag {
+    text-align: center;
+  }
 }
 .end__raffle-img {
   position: relative; /* Establish a positioning context for the text overlay */
@@ -403,13 +407,8 @@ body {
   padding: 10px;
   font-family: Roboto;
   font-weight: 900;
-  font-size: 50px;
+  font-size: clamp(1rem, 5vw, 3rem);
   background-color: transparent;
-}
-@media screen and (max-width: 720px) {
-  .end__raffle-img__text {
-    font-size: xx-large;
-  }
 }
 .end__yellow {
   font-family: Roboto;
@@ -425,11 +424,14 @@ body {
   }
 }
 .end__raffle-text {
-  margin: 70px auto 20px auto;
+  margin: 70px;
+  font-size: clamp(1rem, 5vw, 2rem);
+  width: 60%;
 }
 @media screen and (max-width: 720px) {
   .end__raffle-text {
     text-align: center;
+    width: 90%;
   }
 }
 .end__raffle-text__red {
@@ -457,7 +459,7 @@ body {
 }
 @media screen and (max-width: 720px) {
   .end__community-btn {
-    width: auto;
+    width: 70%;
     padding: 10px;
   }
 }
@@ -477,11 +479,11 @@ body {
 }
 .end__green {
   background-color: #0B2A2B;
-  -webkit-clip-path: polygon(0 10%, 47% 0, 100% 13%, 100% 100%, 0 102%);
-          clip-path: polygon(0 10%, 47% 0, 100% 13%, 100% 100%, 0 102%);
+  -webkit-clip-path: polygon(0 12%, 47% 0, 100% 13%, 100% 100%, 0 102%);
+          clip-path: polygon(0 12%, 47% 0, 100% 13%, 100% 100%, 0 102%);
   margin: 0;
   width: 100%;
-  gap: 50px;
+  gap: 100px;
 }
 @media screen and (max-width: 720px) {
   .end__green {
@@ -491,17 +493,19 @@ body {
     justify-content: center;
     -webkit-clip-path: polygon(0 3%, 47% 0, 100% 3%, 100% 100%, 0 102%);
             clip-path: polygon(0 3%, 47% 0, 100% 3%, 100% 100%, 0 102%);
+    gap: 0px;
   }
 }
 @media screen and (max-width: 720px) {
   .end__green__text {
     text-align: center;
+    width: 85%;
   }
 }
 .end__green__text h1 {
   font-family: Roboto;
   font-weight: 900;
-  font-size: 64px;
+  font-size: clamp(3rem, 7vw, 4rem);
   line-height: 60px;
   letter-spacing: 0%;
   margin-top: 100px;
@@ -582,7 +586,7 @@ body {
   margin-top: 100px;
 }
 .end__green__img img {
-  width: 500px;
+  width: 100%;
 }
 
 .made-by {
